@@ -13,7 +13,8 @@
     "deploy": "git subtree push --prefix build heroku master",
     "demo": "node build/server.bundle.js",
     "clean": "rimraf build",
-    "prebuild": "npm run clean"
+    "prebuild": "npm run clean",
+    "heroku-postbuild": ""
   },
   "repository": {
     "type": "git",
