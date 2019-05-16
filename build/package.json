@@ -10,7 +10,7 @@
     "start": "npm run server",
     "server": "cross-env NODE_ENV=development nodemon -r @babel/register  server/index.js",
     "build": "cross-env NODE_ENV=production webpack --config ./webpack/server.config.js --env production --progress --color",
-    "deploy": "git subtree push --prefix build heroku master",
+    "deploy": "git push heroku master",
     "demo": "node build/server.bundle.js",
     "clean": "rimraf build",
     "prebuild": "npm run clean",
