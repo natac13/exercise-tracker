@@ -29,6 +29,7 @@
   },
   "homepage": "https://github.com/natac13/exercise-tracker#readme",
   "dependencies": {
+    "@babel/types": "7.4.4",
     "body-parser": "1.19.0",
     "chalk": "2.4.2",
     "core-js": "2.6.5",
