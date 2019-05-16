@@ -14,7 +14,7 @@
     "demo": "node build/server.bundle.js",
     "clean": "rimraf build",
     "prebuild": "npm run clean",
-    "heroku-postbuild": "",
+    "heroku-postbuild": "npm i",
     "heroku-prebuild": "rm -rf node_modules"
   },
   "repository": {
