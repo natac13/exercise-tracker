@@ -30,7 +30,8 @@ module.exports = (mode) => ({
   plugins: [
     new webpack.IgnorePlugin(/\.(css|scss)$/),
     new CopyWebpackPlugin([
-      { from: '.public/assets', to: paths.outputAssets },
+      { from: '.views/index.html' },
+      { from: '.public/style.css' },
       { from: './package.json' },
       { from: './Procfile' },
       { from: './favicon.ico' },
