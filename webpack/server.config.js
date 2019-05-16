@@ -29,7 +29,12 @@ module.exports = (mode) => ({
   },
   plugins: [
     new webpack.IgnorePlugin(/\.(css|scss)$/),
-    new CopyWebpackPlugin([{ from: '.public/assets', to: paths.outputAssets }]),
+    new CopyWebpackPlugin([
+      { from: '.public/assets', to: paths.outputAssets },
+      { from: './package.json' },
+      { from: './Procfile' },
+      { from: './favicon.ico' },
+    ]),
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify(mode),
     }),
