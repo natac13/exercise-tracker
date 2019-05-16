@@ -1,7 +1,7 @@
 const webpack = require('webpack');
 const nodeExternals = require('webpack-node-externals');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
-
+const path = require('path');
 const paths = require('./paths');
 
 module.exports = (mode) => ({
@@ -30,8 +30,11 @@ module.exports = (mode) => ({
   plugins: [
     new webpack.IgnorePlugin(/\.(css|scss)$/),
     new CopyWebpackPlugin([
-      { from: './views/index.html' },
-      { from: './public/style.css' },
+      { from: './views', to: path.resolve(__dirname, '..', 'build', 'views') },
+      {
+        from: './public',
+        to: path.resolve(__dirname, '..', 'build', 'public'),
+      },
       { from: './package.json' },
       { from: './Procfile' },
       { from: './favicon.ico' },
